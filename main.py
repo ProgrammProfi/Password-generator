@@ -7,6 +7,10 @@ password = ""
 while True:
     password = ""
     length = int(input("Введите длину пароля >>>"))
-    for i in range(0, length):
-        password = password + symbols[random.randint(1, len(symbols) - 1)]
-    print(password)
+    count = int(input("Введите кол-во паролей >>>"))
+    for i in range(count):
+        password = ""
+        for i in range(length):
+            password = password + symbols[random.randint(0, len(symbols) - 1)]
+        print(f"Пароль: {password}\n")
+        
